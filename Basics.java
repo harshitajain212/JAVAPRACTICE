@@ -1,20 +1,22 @@
-import java.util.*;
+import java.util.Stack;
 public class Basics {
 
     public static void main(String args[]){
-        int a=10;
+        Stack<Integer> st=new Stack<>();
+        st.push(2);
+        st.push(20);
+        st.push(12);
+        st.push(32);
+        st.push(22);
+        System.out.println(st);                          //[2, 20, 12, 32, 22]
+        System.out.println(st.size());                   //5
 
-        // if loop
-        if(a==10){
-            System.out.println("Hello");
-        }
+        st.pop();
+        System.out.println(st);                           //[2, 20, 12, 32]
 
-        int count=1;
+        System.out.println(st.peek());                    //32
 
-        // while loop
-        while(count!=5){
-            System.out.println(count);
-            count++;
-        }
+        System.out.println(st.isEmpty());            //false
+
     }
 }
